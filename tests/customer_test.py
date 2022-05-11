@@ -6,17 +6,20 @@ from src.drink import Drink
 class TestCustomer(unittest.TestCase):
 
     def setUp(self):
-        self.customer1 = Customer("Bob", 20.00)
-        self.customer2 = Customer("Dev", 15.00)
+        self.customer1 = Customer("Bob", 20.00, 30)
+        self.customer2 = Customer("Dev", 15.00, 26)
         self.pub1 = Pub("Bob and Dev's", 300.00)
-        self.drink1 = Drink("Dark and Stormy", 4.50)
-        self.drink2 = Drink("Zombie", 6.25)
+        self.drink1 = Drink("Dark and Stormy", 4.50, 1)
+        self.drink2 = Drink("Zombie", 6.25, 2)
         self.pub1.add_drinks(self.drink1)
         self.pub1.add_drinks(self.drink2)
 
 
     def test_customer_name(self):
         self.assertEqual("Bob", self.customer1.name)   
+
+    def test_customer_age(self):
+        self.assertEqual(30,self.customer1.age)    
 
 
     def test_customer_wallet(self):

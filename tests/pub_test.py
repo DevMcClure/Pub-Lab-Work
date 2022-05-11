@@ -7,9 +7,9 @@ class TestPub(unittest.TestCase):
 
     def setUp(self):
         self.pub1 = Pub("Bob and Dev's", 300.00)
-        self.drink1 = Drink("Dark and Stormy", 4.50)
-        self.drink2 = Drink("Zombie", 6.25)
-
+        self.drink1 = Drink("Dark and Stormy", 4.50, 1)
+        self.drink2 = Drink("Zombie", 6.25, 2)
+       
     def test_pub_has_name(self):
         self.assertEqual("Bob and Dev's", self.pub1.name)   
 
