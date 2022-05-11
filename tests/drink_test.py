@@ -9,4 +9,7 @@ class TestDrink(unittest.TestCase):
     
     def test_drink_name(self):
         self.assertEqual("Zombie", self.drink2.name)
+
+    def test_drink_price(self):
+        self.assertEqual(4.50, self.drink1.price)
         
