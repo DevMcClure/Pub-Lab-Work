@@ -8,4 +8,7 @@ class Pub:
 
     def sell_drink(self, drink):
         self.till += drink.price
+    
+    def add_drinks(self, drink):
+        self.drinks.append(drink)
 
