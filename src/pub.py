@@ -11,5 +11,14 @@ class Pub:
 
 
     def add_drinks(self, drink):
-        self.drinks.append(drink)    
+        self.drinks.append(drink)   
+
+
+    def check_drunkenness(self, customer):
+        check = False
+        if customer.drunkenness >= 2:
+            check = True 
+        return check
+            
+
 
